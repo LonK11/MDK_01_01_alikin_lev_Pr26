@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Collections.Generic;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Airlines_Alikin.Classes;
 
 namespace Airlines_Alikin.Pages
 {
@@ -20,9 +9,13 @@ namespace Airlines_Alikin.Pages
     /// </summary>
     public partial class Ticket : Page
     {
+        public List<TicketContext> AllTickets;
         public Ticket(string from, string to)
         {
             InitializeComponent();
+            AllTickets = TicketContext.AllTickets().FindAll(x =>
+            (x.from == from && to == "")||
+            (from == "" && x.to == to));
         }
     }
 }
