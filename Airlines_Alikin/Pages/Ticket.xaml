@@ -9,7 +9,7 @@
       Title="Ticket">
 
     <Grid Background="White">
-        <ScrollViewer>
+        <ScrollViewer Margin="10,10">
             <StackPanel x:Name="parent">
                 
             </StackPanel>

@@ -5,16 +5,36 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Airlines_Alikin.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="400" d:DesignWidth="700"
+      d:DesignHeight="400" d:DesignWidth="500"
       Title="Main">
 
     <Grid Background="#FF0C73FE">
-        <Label VerticalAlignment="Top" HorizontalAlignment="Left" Content="Поиск дешевых авиабилетов" Margin="210,76,0,0" Foreground="White" FontSize="20" FontWeight="Bold" />
-        <Label VerticalAlignment="Top" HorizontalAlignment="Center" Content="Лучший способ купить авиабилеты дёшево" Margin="0,126,0,0" Foreground="White" Width="252" />
-        <Label VerticalAlignment="Top" HorizontalAlignment="Left" Content="Откуда" Margin="230,157,0,0" Foreground="White" />
-        <TextBox x:Name="from" Width="240" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,0"/>
-        <Label VerticalAlignment="Top" HorizontalAlignment="Left" Content="Куда" Margin="236,230,0,0" Foreground="White" />
-        <TextBox x:Name="to" Width="240" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,256,0,0"/>
-        <Button VerticalAlignment="Top" HorizontalAlignment="Right" Width="100" Height="25" Content="Найти" Click="Search" Margin="0,286,230,0" Background="#FFFF3A00" Foreground="White"/>
+        <!-- Заголовки: по центру окна, они и должны быть по центру сами по себе -->
+        <Label VerticalAlignment="Top" HorizontalAlignment="Center"
+           Content="Поиск дешевых авиабилетов" Margin="0,51,0,0"
+           Foreground="White" FontSize="20" FontWeight="Bold" />
+        <Label VerticalAlignment="Top" HorizontalAlignment="Center"
+           Content="Лучший способ купить авиабилеты дёшево" Margin="0,88,0,0"
+           Foreground="White" />
+
+        <!-- БЛОК ФОРМЫ: один контейнер шириной с поле, по центру окна -->
+        <StackPanel Width="298"
+                HorizontalAlignment="Center" VerticalAlignment="Top"
+                Margin="0,119,0,0">
+
+            <!-- метка прижата к ЛЕВОМУ краю блока = левому краю поля -->
+            <Label Content="Откуда" HorizontalAlignment="Left" Foreground="White" />
+            <TextBox x:Name="from" Height="25" Margin="0,2,0,0" />
+
+            <Label Content="Куда" HorizontalAlignment="Left" Foreground="White"
+               Margin="0,8,0,0" />
+            <TextBox x:Name="to" Height="25" Margin="0,2,0,0" />
+
+            <!-- кнопка прижата к ПРАВОМУ краю блока = правому краю поля -->
+            <Button Content="Найти" Click="Search"
+                HorizontalAlignment="Right"
+                Width="100" Height="25" Margin="0,8,0,0"
+                Background="#FFFF3A00" Foreground="White" />
+        </StackPanel>
     </Grid>
 </Page>

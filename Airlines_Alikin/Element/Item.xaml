@@ -5,37 +5,46 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Airlines_Alikin.Element"
              mc:Ignorable="d">
-    <Grid Background="#C4C4C4" Height="152">
+    <Grid Background="#C4C4C4" Height="152" Margin="0,0,0,10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120"/>
             <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
-        <Label Content="1999 P" HorizontalAlignment="Center" Margin="10,10,10,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="lprice" Content="1999 P" HorizontalAlignment="Center" Margin="10,10,10,0" VerticalAlignment="Top" FontSize="20"/>
         <Button Content="Подробнее" HorizontalAlignment="Center" Margin="0,52,0,0" VerticalAlignment="Top" Width="100" Height="15" Background="#FFFF4000" Foreground="White" FontSize="8"/>
-        <Label Content="pobeda" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" FontSize="12" Grid.Column="1"/>
-        <Label Content="05:50" HorizontalAlignment="Left" Margin="24,41,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="1"/>
-        <Label Content="Пермь" HorizontalAlignment="Left" Margin="24,83,0,0" VerticalAlignment="Top" FontSize="12" Grid.Column="1"/>
-        <Label Content="29 сентября 2021" HorizontalAlignment="Left" Margin="24,114,0,0" FontSize="12" Grid.Column="1" Height="26" VerticalAlignment="Top"/>
+        <Label Content="Победа" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" FontSize="12" Grid.Column="1"/>
+        <Label x:Name="fromTime" Content="05:50" HorizontalAlignment="Left" Margin="24,41,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="1"/>
+        <Label x:Name="from" Content="Пермь" HorizontalAlignment="Left" Margin="24,83,0,0" VerticalAlignment="Top" FontSize="12" Grid.Column="1"/>
+        <Label x:Name="fromDate" Content="29 сентября 2021" HorizontalAlignment="Left" Margin="24,114,0,0" FontSize="12" Grid.Column="1" Height="26" VerticalAlignment="Top"/>
 
-        <Image Width="27" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,52,0,0" Source="..\Images\image.png" Grid.Column="2"/>
-        <Image Width="27" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="264,53,10,0" Source="..\Images\image.png" Grid.Column="2" RenderTransformOrigin="0.5,0.5">
+        <Image Width="30" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="9.6,35,0,0" Source="..\Images\image.png" Grid.Column="2" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="90.973"/>
+                    <RotateTransform Angle="-34.22"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Label Content="В пути 2 часа" HorizontalAlignment="Center" Margin="0,57,0,0" VerticalAlignment="Top" FontSize="8" Grid.Column="2"/>
-        <Grid Grid.Column="2" Background="#939993" Margin="10,83,10,65" Height="5"/>
+        <Image Height="30" VerticalAlignment="Top" Margin="0,35,5.4,0" Source="..\Images\image.png" Grid.Column="2" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="30">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="37.908"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label x:Name="way" Content="В пути 2 часа"  HorizontalAlignment="Center" Margin="44.6,35,34.4,0" VerticalAlignment="Top" FontSize="12" Grid.Column="2"/>
+        <Grid Grid.Column="2" Background="#939993" Margin="5,70,5,0" Height="5" VerticalAlignment="Top"/>
 
-        <Label Content="pobeda" Margin="0,10,77,0" VerticalAlignment="Top" FontSize="12" Grid.Column="3" HorizontalAlignment="Right" Width="51"/>
-        <Label Content="06:05" Margin="0,41,71,0" VerticalAlignment="Top" FontSize="20" Grid.Column="3" HorizontalAlignment="Right" Width="57"/>
-        <Label Content="Пермь" Margin="0,83,82,0" VerticalAlignment="Top" FontSize="12" Grid.Column="3" HorizontalAlignment="Right" Width="46"/>
-        <Label Content="29 сентября 2021" HorizontalAlignment="Center" Margin="0,114,0,0" FontSize="12" Grid.Column="3" Height="26" VerticalAlignment="Top"/>
+        <Label Content="Победа" Margin="0,10,77,0" VerticalAlignment="Top" FontSize="12" Grid.Column="3" HorizontalAlignment="Right" Width="51"/>
+        <Label x:Name="toTime" Content="06:05" Margin="0,41,71,0" VerticalAlignment="Top" FontSize="20" Grid.Column="3" HorizontalAlignment="Right" Width="57"/>
+        <Label x:Name="to" Content="Пермь" Margin="0,83,71,0" VerticalAlignment="Top" FontSize="12" Grid.Column="3" HorizontalAlignment="Right" Width="57"/>
+        <Label x:Name="toDate" Content="29 сентября 2021" HorizontalAlignment="Left" Margin="22,114,0,0" FontSize="12" Grid.Column="3" Height="26" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>

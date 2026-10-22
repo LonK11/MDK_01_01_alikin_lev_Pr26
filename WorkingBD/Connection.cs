@@ -3,7 +3,7 @@ namespace WorkingBD
 {
     public class Connection
     {
-        static readonly string strConnection = "server=localhost;database=Airlines;uid=root;pwd=root;";
+        static readonly string strConnection = "server=127.0.0.1;port=3307;database=Airlines;uid=root;pwd=;";
         public static MySqlConnection OpenConnection()
         {
             MySqlConnection connection = new MySqlConnection(strConnection);

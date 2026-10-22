@@ -15,7 +15,17 @@ namespace Airlines_Alikin.Pages
             InitializeComponent();
             AllTickets = TicketContext.AllTickets().FindAll(x =>
             (x.from == from && to == "")||
-            (from == "" && x.to == to));
+            (from == "" && x.to == to) ||
+            (x.from == from && x.to == to));
+
+            CreateUI();
+        }
+        public void CreateUI()
+        {
+            foreach (TicketContext ticket in AllTickets)
+            {
+                parent.Children.Add(new Element.Item(ticket));
+            }
         }
     }
 }
