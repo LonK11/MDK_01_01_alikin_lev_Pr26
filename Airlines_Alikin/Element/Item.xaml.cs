@@ -34,12 +34,10 @@ namespace Airlines_Alikin.Element
             to.Content = Ticket.to;
 
             TimeSpan WayTime = Ticket.time_way.Subtract(Ticket.time_start);
-            string sHours = WayTime.Hours.ToString();
-            if (WayTime.Hours < 10) sHours = "0" + WayTime.Hours;
-            string sMinute  = WayTime.Minutes.ToString();
-            if (WayTime.Minutes < 10) sMinute = "0" + WayTime.Minutes;
-            way.Content = "в пути:" + sHours + ":" + sMinute;
-            MessageBox.Show(WayTime.ToString());
+            int totalHours = (int)Math.Floor(WayTime.TotalMinutes / 60.0);
+            int minutes = WayTime.Minutes;
+
+            way.Content = $"в пути: {totalHours:D2}:{minutes:D2}";
         }
     }
 }

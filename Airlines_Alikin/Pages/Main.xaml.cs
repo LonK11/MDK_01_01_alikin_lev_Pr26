@@ -27,7 +27,8 @@ namespace Airlines_Alikin.Pages
 
         private void Search(object sender, RoutedEventArgs e)
         {
-            MainWindow.init.OpenPage(new Pages.Ticket(from.Text, to.Text));
+            DateTime departDate = date.SelectedDate ?? DateTime.Today;
+            MainWindow.init.OpenPage(new Pages.Ticket(from.Text, to.Text, departDate.Date));
         }
     }
 }
